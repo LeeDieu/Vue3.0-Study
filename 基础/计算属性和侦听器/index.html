@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算属性和侦听器</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="computed-basics">
+        <p>Has published books:</p>
+        <span>{{author.books.length >0?'Yes':'No'}}</span>
+
+    </div>
+    <div id="computed-basics1">
+        <p>Has published books:</p>
+        <span>{{publishedBookMessage}}</span>
+    </div>
+    <!-- !计算属性缓存 vs 方法 -->
+    <div id="date">
+        <p>Time:{{now}}</p>
+    </div>
+
+    <!--! 计算属性的 Setter -->
+    <div id="app"></div>
+
+    <!-- ! 侦听器 -->
+    <div id="watch-example">
+        <p>
+            Ask a yes/no question:
+            <input v-model="question">
+        </p>
+        <p>{{answer}}</p>
+    </div>
+    <!-- ! 计算属性 vs 侦听器 -->
+    <div id="demo">{{fullName}}</div>
+    <div id="demo1">{{fullName}}</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

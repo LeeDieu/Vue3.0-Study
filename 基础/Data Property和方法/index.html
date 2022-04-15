@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Property 和方法</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <span>Count: {{count}}</span>
+    </div>
+    <div id="app1">
+        <p>Count: {{count}}</p>
+        <button @click="increment">Up vote</button>
+    </div>
+    <div id="app2">
+        <p>Count: {{count}}</p>
+        <button @click="increment">Up vote</button>
+    </div>
+
+    <script src="https://unpkg.com/lodash@4.17.20/lodash.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
