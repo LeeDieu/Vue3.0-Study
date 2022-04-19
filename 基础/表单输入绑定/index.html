@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单输入绑定</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <!-- ! 文本 (Text) -->
+    <div id="demo">
+        <input v-model="message" placeholder="edit me">
+        <p>Message is : {{message}}</p>
+        <span>Multiline message is :</span>
+    </div>
+    <!-- !多行文本 (Textarea) -->
+    <div id="demo1">
+        <p style="white-space: pre-line;">{{message}}</p>
+        <br>
+        <textarea v-model="message" cols="30" rows="10" placeholder="add multiple lines"></textarea>
+    </div>
+    <!-- ! 复选框 (Checkbox) -->
+    <div id="demo2">
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{checked}}</label>
+    </div>
+    <div id="v-model-multiple-checkboxes">
+        <input type="checkbox" id="lzy" value="Lzy" v-model="checkNames">
+        <label for="lzy">Lzy</label>
+        <input type="checkbox" id="leeDieu" value="LeeDieu" v-model="checkNames">
+        <label for="leeDieu">LeeDieu</label>
+        <input type="checkbox" id="zyDieu" value="ZyDieu" v-model="checkNames">
+        <label for="zyDieu">ZyDieu</label>
+        <br>
+        <span>Checked names: {{checkNames}}</span>
+    </div>
+    <!-- ! 单选框 (Radio) -->
+    <div id="v-model-radiobutton">
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One1</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{picked}}</span>
+    </div>
+    <!-- ! 选择框 (Select) -->
+    <div id="v-model-select" class="demo">
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{selected}}</span>
+        <br>
+        <select v-model="selectedMultiple" multiple>
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{selectedMultiple}}</span>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
